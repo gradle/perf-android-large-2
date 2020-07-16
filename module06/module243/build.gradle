@@ -1,0 +1,72 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 21
+                    targetSdkVersion 28
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    annotationProcessor("com.google.dagger:dagger-compiler:2.28")
+    api(project(":module06:module007:module7"))
+    api(project(":module06:module016:module5"))
+    api(project(":module06:module017:module8"))
+    api(project(":module06:module084"))
+    api(project(":module06:module087:module1"))
+    api(project(":module06:module109:module1"))
+    api(project(":module06:module134:module7"))
+    api(project(":module06:module151"))
+    api(project(":module06:module298:module1"))
+    api(project(":module06:module315"))
+    api(project(":module06:module318:module5"))
+    api(project(":module06:module339:module1"))
+    api(project(":module06:module348"))
+    api(project(":module06:module352:module3"))
+    api(project(":module16:module1"))
+    api("com.google.dagger:dagger:2.28")
+    api("io.reactivex.rxjava2:rxjava:2.2.19")
+    compileOnly("androidx.annotation:annotation:1.1.0")
+    compileOnly("org.jetbrains:annotations:13.0")
+    implementation(project(":module06:module007:module7"))
+    implementation(project(":module06:module013:module6"))
+    implementation(project(":module06:module016:module5"))
+    implementation(project(":module06:module017:module8"))
+    implementation(project(":module06:module052"))
+    implementation(project(":module06:module084"))
+    implementation(project(":module06:module087:module1"))
+    implementation(project(":module06:module109:module1"))
+    implementation(project(":module06:module122:module4"))
+    implementation(project(":module06:module134:module7"))
+    implementation(project(":module06:module151"))
+    implementation(project(":module06:module165:module9"))
+    implementation(project(":module06:module298:module1"))
+    implementation(project(":module06:module315"))
+    implementation(project(":module06:module318:module5"))
+    implementation(project(":module06:module339:module1"))
+    implementation(project(":module06:module348"))
+    implementation(project(":module06:module352:module3"))
+    implementation(project(":module16:module1"))
+    implementation("com.google.dagger:dagger:2.28")
+    implementation("com.jakewharton.rxrelay2:rxrelay:2.1.0")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.19")
+    testImplementation(project(":module06:module016:module6"))
+    testImplementation(project(":module06:module089"))
+    testImplementation(project(":module06:module134:module8"))
+    testImplementation(project(":module06:module255"))
+    testImplementation(project(":module06:module282:module2"))
+    testImplementation(project(":module06:module298:module4"))
+    testImplementation(project(":module06:module318:module1"))
+    testImplementation(project(":module06:module339:module2"))
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation("com.google.truth:truth:1.0")
+    testImplementation("junit:junit:4.13")
+    testImplementation("org.mockito:mockito-core:2.28.2")
+}

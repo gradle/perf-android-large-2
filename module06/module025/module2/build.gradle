@@ -1,0 +1,13 @@
+plugins {
+    id("java-library")
+    id("java")
+}
+
+dependencies {
+    api("io.reactivex.rxjava2:rxjava:2.2.19")
+    implementation("com.jakewharton.rxrelay2:rxrelay:2.1.0")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.19")
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation("com.jakewharton.rxrelay2:rxrelay:2.1.0")
+    testImplementation("io.reactivex.rxjava2:rxjava:2.2.19")
+}

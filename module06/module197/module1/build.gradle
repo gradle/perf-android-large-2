@@ -1,0 +1,11 @@
+plugins {
+    id("java-library")
+    id("java")
+}
+
+dependencies {
+    api("org.mockito:mockito-core:2.28.2")
+    implementation("org.mockito:mockito-core:2.28.2")
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation("org.mockito:mockito-core:2.28.2")
+}

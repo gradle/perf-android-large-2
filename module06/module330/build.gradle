@@ -1,0 +1,60 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 21
+                    targetSdkVersion 28
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    implementation(project(":module06:module013:module6"))
+    implementation(project(":module06:module067"))
+    implementation(project(":module06:module069"))
+    implementation(project(":module06:module127"))
+    implementation(project(":module06:module255"))
+    implementation(project(":module06:module261"))
+    implementation(project(":module06:module294:module4"))
+    implementation(project(":module06:module297:module5"))
+    implementation(project(":module06:module295:module7"))
+    implementation(project(":module06:module298:module4"))
+    implementation(project(":module06:module326"))
+    implementation(project(":module06:module327:module3"))
+    implementation("io.reactivex:rxjava:1.3.8")
+    testImplementation(project(":module01:module02"))
+    testImplementation(project(":module05:module03:module2"))
+    testImplementation(project(":module05:module14:module1:module4"))
+    testImplementation(project(":module06:module013:module3"))
+    testImplementation(project(":module06:module024"))
+    testImplementation(project(":module06:module029"))
+    testImplementation(project(":module06:module030"))
+    testImplementation(project(":module06:module048"))
+    testImplementation(project(":module06:module083:module10"))
+    testImplementation(project(":module06:module089"))
+    testImplementation(project(":module06:module118"))
+    testImplementation(project(":module06:module156:module3"))
+    testImplementation(project(":module06:module282:module2"))
+    testImplementation(project(":module06:module297:module1"))
+    testImplementation(project(":module06:module295:module7"))
+    testImplementation(project(":module06:module331"))
+    testImplementation(project(":module06:module333:module5"))
+    testImplementation(project(":module06:module342:module4"))
+    testImplementation(project(":module06:module339:module2"))
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation(project(":module06:module357"))
+    testImplementation(project(":module15:module36:module1"))
+    testImplementation("com.google.truth:truth:1.0")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+    testImplementation("com.squareup.burst:burst-junit4:1.1.1")
+    testImplementation("com.squareup.sqlbrite3:sqlbrite-kotlin:3.2.0")
+    testImplementation("junit:junit:4.13")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.3.72")
+    testImplementation("org.robolectric:robolectric:4.3")
+}

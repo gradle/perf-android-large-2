@@ -1,0 +1,40 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 25
+                    targetSdkVersion 25
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    androidTestImplementation(project(":module04:module19:module4"))
+    androidTestImplementation(project(":module11"))
+    androidTestImplementation(project(":module14:module2"))
+    androidTestImplementation(project(":module19:module1:module5:module1"))
+    androidTestImplementation(project(":module19:module2:module4:module2"))
+    androidTestImplementation(project(":module19:module2:module8:module2"))
+    androidTestImplementation(project(":module19:module4"))
+    androidTestImplementation(project(":module22:module09:module02"))
+    androidTestImplementation(project(":module22:module09:module08"))
+    androidTestImplementation(project(":module22:module07:module30"))
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.1.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.1.0")
+    androidTestImplementation("androidx.test.espresso:espresso-idling-resource:3.1.0")
+    androidTestImplementation("androidx.test:rules:1.1.0")
+    androidTestImplementation("androidx.test:runner:1.1.0")
+    androidTestImplementation("com.squareup.burst:burst-junit4:1.1.1")
+    androidTestImplementation("junit:junit:4.13")
+    implementation(project(":module22:module01:module18"))
+    implementation(project(":module22:module01:module25"))
+    implementation(project(":module22:module01:module32"))
+    implementation(project(":module22:module09:module05"))
+    testImplementation(project(":module06:module339:module3:module1"))
+}

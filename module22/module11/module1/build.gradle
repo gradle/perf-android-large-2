@@ -1,0 +1,60 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 25
+                    targetSdkVersion 25
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    androidTestImplementation(project(":module04:module19:module4"))
+    androidTestImplementation(project(":module05:module08:module1"))
+    androidTestImplementation(project(":module05:module10:module10"))
+    androidTestImplementation(project(":module06:module021"))
+    androidTestImplementation(project(":module06:module044:module1"))
+    androidTestImplementation(project(":module06:module083:module03"))
+    androidTestImplementation(project(":module06:module097:module7"))
+    androidTestImplementation(project(":module06:module143:module3"))
+    androidTestImplementation(project(":module06:module170:module2"))
+    androidTestImplementation(project(":module06:module185:module1"))
+    androidTestImplementation(project(":module06:module195"))
+    androidTestImplementation(project(":module06:module332"))
+    androidTestImplementation(project(":module06:module334:module1"))
+    androidTestImplementation(project(":module06:module335:module1"))
+    androidTestImplementation(project(":module06:module336:module1"))
+    androidTestImplementation(project(":module07:module08:module6"))
+    androidTestImplementation(project(":module07:module44:module2"))
+    androidTestImplementation(project(":module07:module89"))
+    androidTestImplementation(project(":module11"))
+    androidTestImplementation(project(":module14:module2"))
+    androidTestImplementation(project(":module22:module01:module01:module2"))
+    androidTestImplementation(project(":module22:module01:module27"))
+    androidTestImplementation(project(":module22:module01:module34"))
+    androidTestImplementation(project(":module22:module11:module5"))
+    androidTestImplementation(project(":module22:module07:module29"))
+    androidTestImplementation(project(":module22:module07:module30"))
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.1.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.1.0")
+    androidTestImplementation("androidx.test.espresso:espresso-idling-resource:3.1.0")
+    androidTestImplementation("androidx.test:rules:1.1.0")
+    androidTestImplementation("androidx.test:runner:1.1.0")
+    androidTestImplementation("com.google.truth:truth:1.0")
+    androidTestImplementation("com.squareup.burst:burst-junit4:1.1.1")
+    androidTestImplementation("junit:junit:4.13")
+    implementation(project(":module01:module33"))
+    implementation(project(":module22:module01:module18"))
+    implementation(project(":module22:module01:module25"))
+    implementation(project(":module22:module01:module32"))
+    implementation(project(":module22:module01:module35"))
+    implementation(project(":module22:module01:module45"))
+    implementation(project(":module22:module11:module2"))
+    testImplementation(project(":module06:module339:module3:module1"))
+}

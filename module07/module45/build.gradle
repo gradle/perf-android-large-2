@@ -1,0 +1,85 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 21
+                    targetSdkVersion 28
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    api(project(":module01:module18"))
+    api(project(":module06:module002:module5"))
+    api(project(":module06:module022"))
+    api(project(":module06:module031:module3"))
+    api(project(":module06:module179:module1"))
+    api(project(":module06:module216"))
+    api(project(":module06:module217:module2"))
+    api(project(":module06:module246"))
+    api("com.squareup.wire:wire-runtime:3.0.0")
+    api("com.squareup.workflow:workflow-ui-core-android:0.23.2")
+    api("io.branch.sdk.android:library:2.18.1")
+    api("io.reactivex.rxjava2:rxjava:2.2.19")
+    compileOnly(project(":module06:module127"))
+    compileOnly("javax.annotation:jsr250-api:1.0")
+    compileOnly("org.jetbrains:annotations:13.0")
+    implementation(project(":module01:module18"))
+    implementation(project(":module01:module21"))
+    implementation(project(":module01:module32"))
+    implementation(project(":module01:module39"))
+    implementation(project(":module06:module002:module5"))
+    implementation(project(":module06:module013:module6"))
+    implementation(project(":module06:module022"))
+    implementation(project(":module06:module031:module3"))
+    implementation(project(":module06:module032"))
+    implementation(project(":module06:module051"))
+    implementation(project(":module06:module087:module1"))
+    implementation(project(":module06:module091:module1"))
+    implementation(project(":module06:module090:module3"))
+    implementation(project(":module06:module109:module1"))
+    implementation(project(":module06:module116"))
+    implementation(project(":module06:module122:module4"))
+    implementation(project(":module06:module133:module1"))
+    implementation(project(":module06:module142"))
+    implementation(project(":module06:module149"))
+    implementation(project(":module06:module161:module3"))
+    implementation(project(":module06:module179:module1"))
+    implementation(project(":module06:module178:module3"))
+    implementation(project(":module06:module183:module7"))
+    implementation(project(":module06:module216"))
+    implementation(project(":module06:module217:module2"))
+    implementation(project(":module06:module246"))
+    implementation(project(":module06:module315"))
+    implementation(project(":module06:module326"))
+    implementation(project(":module06:module342:module3"))
+    implementation(project(":module06:module344"))
+    implementation(project(":module06:module345"))
+    implementation(project(":module15:module36:module1"))
+    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation("com.android.installreferrer:installreferrer:1.0")
+    implementation("com.appsflyer:af-android-sdk:4.8.19")
+    implementation("com.google.dagger:dagger:2.28")
+    implementation("com.squareup.wire:wire-runtime:3.0.0")
+    implementation("com.squareup.workflow:workflow-ui-core-android:0.23.2")
+    implementation("io.branch.sdk.android:library:2.18.1")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.19")
+    kapt("com.google.dagger:dagger-compiler:2.28")
+    testImplementation(project(":module06:module013:module3"))
+    testImplementation(project(":module06:module089"))
+    testImplementation(project(":module06:module194"))
+    testImplementation(project(":module06:module295:module7"))
+    testImplementation(project(":module06:module298:module4"))
+    testImplementation(project(":module06:module339:module2"))
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation("com.google.truth:truth:1.0")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+    testImplementation("org.robolectric:robolectric:4.3")
+}

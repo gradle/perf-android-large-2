@@ -1,0 +1,11 @@
+plugins {
+    id("java-library")
+    id("java")
+}
+
+dependencies {
+    api("javax.inject:javax.inject:1")
+    implementation("javax.inject:javax.inject:1")
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation("javax.inject:javax.inject:1")
+}

@@ -1,0 +1,32 @@
+plugins {
+    id("java-library")
+    id("java")
+}
+
+dependencies {
+    api(project(":module15:module01:module1"))
+    api(project(":module15:module02:module1"))
+    api(project(":module15:module16:module1"))
+    api(project(":module15:module17:module1"))
+    api(project(":module15:module38:module1"))
+    api(project(":module15:module41:module1"))
+    api(project(":module15:module64:module1"))
+    api("com.squareup.wire:wire-runtime:3.0.0")
+    implementation(project(":module15:module01:module1"))
+    implementation(project(":module15:module02:module1"))
+    implementation(project(":module15:module16:module1"))
+    implementation(project(":module15:module17:module1"))
+    implementation(project(":module15:module38:module1"))
+    implementation(project(":module15:module41:module1"))
+    implementation(project(":module15:module64:module1"))
+    implementation("com.squareup.wire:wire-runtime:3.0.0")
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation(project(":module15:module01:module1"))
+    testImplementation(project(":module15:module02:module1"))
+    testImplementation(project(":module15:module16:module1"))
+    testImplementation(project(":module15:module17:module1"))
+    testImplementation(project(":module15:module38:module1"))
+    testImplementation(project(":module15:module41:module1"))
+    testImplementation(project(":module15:module64:module1"))
+    testImplementation("com.squareup.wire:wire-runtime:3.0.0")
+}

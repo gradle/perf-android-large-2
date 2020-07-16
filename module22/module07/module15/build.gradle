@@ -1,0 +1,17 @@
+apply plugin: "com.android.application"
+android {
+    compileSdkVersion = "android-29"
+    defaultConfig {
+        minSdkVersion 25
+        targetSdkVersion 25
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+}
+dependencies {
+    implementation(project(":module22:module07:module16"))
+    testImplementation(project(":module06:module339:module3:module1"))
+}

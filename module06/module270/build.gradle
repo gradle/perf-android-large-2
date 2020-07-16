@@ -1,0 +1,12 @@
+plugins {
+    id("java")
+    id("org.jetbrains.kotlin.jvm")
+}
+
+dependencies {
+    api("com.squareup.okio:okio:2.2.2")
+    implementation("com.squareup.okio:okio:2.2.2")
+    implementation("com.squareup.wire:wire-runtime:3.0.0")
+    testImplementation("com.squareup.okio:okio:2.2.2")
+    testImplementation("com.squareup.wire:wire-runtime:3.0.0")
+}

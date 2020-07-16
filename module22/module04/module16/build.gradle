@@ -1,0 +1,44 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 25
+                    targetSdkVersion 25
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    api(project(":module01:module27"))
+    api(project(":module05:module01:module14:module2"))
+    api(project(":module06:module335:module1"))
+    implementation(project(":module01:module27"))
+    implementation(project(":module05:module01:module14:module2"))
+    implementation(project(":module05:module01:module15:module2"))
+    implementation(project(":module05:module10:module10"))
+    implementation(project(":module06:module050"))
+    implementation(project(":module06:module182:module5"))
+    implementation(project(":module06:module289"))
+    implementation(project(":module06:module334:module1"))
+    implementation(project(":module06:module335:module1"))
+    implementation(project(":module06:module347"))
+    implementation(project(":module06:module349"))
+    implementation(project(":module08:module3"))
+    implementation(project(":module07:module84"))
+    implementation(project(":module10"))
+    implementation(project(":module11"))
+    implementation(project(":module22:module01:module25"))
+    implementation(project(":module22:module04:module05"))
+    implementation(project(":module22:module04:module06"))
+    implementation(project(":module22:module04:module08"))
+    implementation(project(":module22:module04:module10"))
+    implementation(project(":module22:module04:module13"))
+    implementation(project(":module22:module04:module17"))
+    testImplementation(project(":module06:module339:module3:module1"))
+}

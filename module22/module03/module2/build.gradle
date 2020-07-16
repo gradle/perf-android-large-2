@@ -1,0 +1,63 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 25
+                    targetSdkVersion 25
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    api(project(":module06:module194"))
+    api(project(":module06:module342:module3"))
+    api(project(":module06:module357"))
+    api(project(":module06:module359"))
+    api(project(":module22:module01:module14"))
+    api(project(":module22:module01:module33"))
+    api(project(":module22:module01:module39"))
+    api(project(":module22:module01:module41"))
+    api(project(":module22:module01:module45"))
+    api(project(":module22:module01:module48"))
+    api("io.reactivex.rxjava2:rxjava:2.2.19")
+    compileOnly("javax.annotation:jsr250-api:1.0")
+    implementation(project(":module01:module32"))
+    implementation(project(":module01:module33"))
+    implementation(project(":module06:module109:module1"))
+    implementation(project(":module06:module194"))
+    implementation(project(":module06:module321:module09"))
+    implementation(project(":module06:module340:module2"))
+    implementation(project(":module06:module342:module3"))
+    implementation(project(":module06:module357"))
+    implementation(project(":module06:module359"))
+    implementation(project(":module22:module01:module14"))
+    implementation(project(":module22:module01:module21"))
+    implementation(project(":module22:module01:module32"))
+    implementation(project(":module22:module01:module33"))
+    implementation(project(":module22:module01:module35"))
+    implementation(project(":module22:module01:module39"))
+    implementation(project(":module22:module01:module41"))
+    implementation(project(":module22:module01:module45"))
+    implementation(project(":module22:module01:module48"))
+    implementation("androidx.appcompat:appcompat:1.1.0")
+    implementation("androidx.core:core-ktx:1.2.0")
+    implementation("com.google.dagger:dagger:2.28")
+    implementation("com.jakewharton.rxrelay2:rxrelay:2.1.0")
+    implementation("com.jakewharton.timber:timber:4.6.1")
+    implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.19")
+    kapt("com.google.dagger:dagger-compiler:2.28")
+    testImplementation(project(":module06:module339:module2"))
+    testImplementation(project(":module06:module339:module3:module1"))
+    testImplementation("com.google.truth:truth:1.0")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+    testImplementation("junit:junit:4.13")
+    testImplementation("org.robolectric:robolectric:4.3")
+}

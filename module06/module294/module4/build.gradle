@@ -1,0 +1,27 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+            android {
+                compileSdkVersion = "android-29"
+                defaultConfig {
+                    minSdkVersion 21
+                    targetSdkVersion 28
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                kotlinOptions {
+    jvmTarget = "1.8"
+}
+            }
+dependencies {
+    api(project(":module06:module143:module6"))
+    api(project(":module06:module294:module3"))
+    api("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72")
+    implementation(project(":module06:module143:module6"))
+    implementation(project(":module06:module294:module3"))
+    implementation(project(":module15:module36:module1"))
+    implementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72")
+    testImplementation(project(":module06:module339:module3:module1"))
+}
