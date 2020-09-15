@@ -1,0 +1,8 @@
+assembleDebugCoCa {
+    gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=10000"]
+    tasks = [":module21:module02:assembleDebug"]
+}
+
+assembleDebugNoCoCa {
+    tasks = [":module21:module02:assembleDebug"]
+}
