@@ -1,8 +1,24 @@
-assembleDebugCoCa {
-    gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=10000"]
+assembleDebugAppVintage {
     tasks = [":module21:module02:assembleDebug"]
 }
 
-assembleDebugNoCoCa {
+assembleDebugAppCCLoad {
+    gradle-args = ["--configuration-cache", "-Dorg.gradle.unsafe.configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=1000000"]
     tasks = [":module21:module02:assembleDebug"]
+}
+
+assembleDebugAppCCStore {
+    gradle-args = ["--configuration-cache", "-Dorg.gradle.unsafe.configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=1000000"]
+    tasks = [":module21:module02:assembleDebug"]
+    clear-configuration-cache-state-before = BUILD
+}
+
+assembleDebugAppPIStore {
+    gradle-args = ["-Dorg.gradle.unsafe.isolated-projects=true", "-Dorg.gradle.unsafe.configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=1000000"]
+    tasks = [":module21:module02:assembleDebug"]
+    clear-configuration-cache-state-before = BUILD
+}
+
+sync {
+    android-studio-sync {}    
 }
