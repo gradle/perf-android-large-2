@@ -1,4 +1,5 @@
 build
+local.properties
 /.gradle
 /gradle-user-home
 /profile-out*
