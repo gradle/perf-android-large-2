@@ -1,3 +1,38 @@
+assembleCCStore {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+  clear-configuration-cache-state-before=BUILD
+}
+
+assembleCC {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+}
+
+assemble {
+  tasks = [":module21:module02:assembleDebug"]
+}
+
+assembleTest4 {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--max-workers=4"]
+}
+
+assembleTest8 {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--max-workers=8"]
+}
+
+assembleTest16 {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--max-workers=16"]
+}
+
+assembleTest32 {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--max-workers=32"]
+}
+
 assembleDebugAppVintage {
     tasks = [":module21:module02:assembleDebug"]
 }
@@ -20,5 +55,7 @@ assembleDebugAppPIStore {
 }
 
 sync {
-    android-studio-sync {}    
+    android-studio-sync {
+      studio-jvm-args = ["-Xms256m", "-Xmx6g"]
+    }    
 }
