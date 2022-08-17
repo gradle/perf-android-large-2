@@ -9,6 +9,11 @@ assembleCC {
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
 }
 
+assembleTestCC {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+}
+
 assemble {
   tasks = [":module21:module02:assembleDebug"]
 }
