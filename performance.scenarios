@@ -1,12 +1,17 @@
-assembleCCStore {
+
+assemble {
   tasks = [":module21:module02:assembleDebug"]
-  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
-  clear-configuration-cache-state-before=BUILD
 }
 
 assembleCC {
   tasks = [":module21:module02:assembleDebug"]
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+}
+
+cleanAssembleCC {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+  cleanup-tasks = ["clean"]
 }
 
 assembleTestCC {
@@ -19,49 +24,30 @@ assembleAppAndTestCC {
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
 }
 
-assemble {
-  tasks = [":module21:module02:assembleDebug"]
-}
-
-assembleTest4 {
+assembleTestCC4 {
   tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--max-workers=4"]
 }
 
-assembleTest8 {
+assembleTestC8 {
   tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--max-workers=8"]
 }
 
-assembleTest16 {
+assembleTestCC16 {
   tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--max-workers=16"]
 }
 
-assembleTest32 {
+assembleTestC32 {
   tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--max-workers=32"]
 }
 
-assembleDebugAppVintage {
-    tasks = [":module21:module02:assembleDebug"]
-}
-
-assembleDebugAppCCLoad {
-    gradle-args = ["--configuration-cache", "-Dorg.gradle.unsafe.configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=1000000"]
-    tasks = [":module21:module02:assembleDebug"]
-}
-
-assembleDebugAppCCStore {
-    gradle-args = ["--configuration-cache", "-Dorg.gradle.unsafe.configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=1000000"]
-    tasks = [":module21:module02:assembleDebug"]
-    clear-configuration-cache-state-before = BUILD
-}
-
-assembleDebugAppPIStore {
-    gradle-args = ["-Dorg.gradle.unsafe.isolated-projects=true", "-Dorg.gradle.unsafe.configuration-cache-problems=warn", "-Dorg.gradle.unsafe.configuration-cache.max-problems=1000000"]
-    tasks = [":module21:module02:assembleDebug"]
-    clear-configuration-cache-state-before = BUILD
+assembleCCStore {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+  clear-configuration-cache-state-before=BUILD
 }
 
 sync {
