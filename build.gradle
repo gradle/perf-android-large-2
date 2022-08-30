@@ -7,11 +7,14 @@ buildscript {
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0")
+        // see https://developer.android.com/studio/releases/gradle-plugin
         // classpath("com.android.tools.build:gradle:7.4.0-alpha10")
         // Compatible with 7.4+
-        classpath("com.android.tools.build:gradle:7.3.0-rc01")
+        // classpath("com.android.tools.build:gradle:7.3.0-rc01")
         // Compatible with 7.3.3+
-        // classpath("com.android.tools.build:gradle:7.2.0")
+        // classpath("com.android.tools.build:gradle:7.2.2")
+        // Compatible with 7.2+
+        classpath("com.android.tools.build:gradle:7.1.3")
     }
 }
 
