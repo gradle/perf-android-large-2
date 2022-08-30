@@ -29,9 +29,14 @@ assembleTestCC4 {
   gradle-args = ["--configuration-cache", "--max-workers=4"]
 }
 
-assembleTestC8 {
+assembleTestCC8 {
   tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--max-workers=8"]
+}
+
+assembleTestCC12 {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--max-workers=12"]
 }
 
 assembleTestCC16 {
@@ -39,9 +44,14 @@ assembleTestCC16 {
   gradle-args = ["--configuration-cache", "--max-workers=16"]
 }
 
-assembleTestC32 {
+assembleTestCC32 {
   tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--max-workers=32"]
+}
+
+assembleTestCC48 {
+  tasks = [":module21:module02:assembleDebugAndTest"]
+  gradle-args = ["--configuration-cache", "--max-workers=48"]
 }
 
 assembleCCStore {
