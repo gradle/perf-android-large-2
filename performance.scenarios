@@ -3,6 +3,16 @@ assemble {
   tasks = [":module21:module02:assembleDebug"]
 }
 
+assemble4 {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--max-workers=4"]
+}
+
+assemble8 {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--max-workers=8"]
+}
+
 assembleCC {
   tasks = [":module21:module02:assembleDebug"]
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
@@ -11,6 +21,18 @@ assembleCC {
 cleanAssembleCC {
   tasks = [":module21:module02:assembleDebug"]
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
+  cleanup-tasks = ["clean"]
+}
+
+cleanAssembleCC4 {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn", "--max-workers=4"]
+  cleanup-tasks = ["clean"]
+}
+
+cleanAssembleCC8 {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn", "--max-workers=8"]
   cleanup-tasks = ["clean"]
 }
 
