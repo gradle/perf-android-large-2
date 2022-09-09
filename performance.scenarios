@@ -36,13 +36,13 @@ cleanAssembleCC8 {
   cleanup-tasks = ["clean"]
 }
 
-assembleTestCC {
-  tasks = [":module21:module02:assembleDebugAndTest"]
+assembleAppAndTestCC {
+  tasks = [":module21:module02:assembleDebug", ":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
 }
 
-assembleAppAndTestCC {
-  tasks = [":module21:module02:assembleDebug", ":module21:module02:assembleDebugAndTest"]
+assembleTestCC {
+  tasks = [":module21:module02:assembleDebugAndTest"]
   gradle-args = ["--configuration-cache", "--configuration-cache-problems=warn"]
 }
 
