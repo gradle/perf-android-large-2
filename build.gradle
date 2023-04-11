@@ -2,13 +2,13 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0")
         // see https://developer.android.com/studio/releases/gradle-plugin
-        // classpath("com.android.tools.build:gradle:7.4.0-alpha10")
+        classpath("com.android.tools.build:gradle:7.4.0")
         // Compatible with 7.4+
         // classpath("com.android.tools.build:gradle:7.3.0-rc01")
         // Compatible with 7.3.3+
@@ -16,7 +16,7 @@ buildscript {
         // Compatible with 7.2+
         // classpath("com.android.tools.build:gradle:7.1.3")
         // Compatible with 7.0+
-        classpath("com.android.tools.build:gradle:7.0.1")
+        // classpath("com.android.tools.build:gradle:7.0.1")
     }
 }
 
@@ -26,11 +26,13 @@ plugins {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
      }
 }
+
+println "USING GRADLE VERSION $gradle.gradleVersion"
 
 dependencies {
 }

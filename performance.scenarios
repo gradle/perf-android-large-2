@@ -3,6 +3,18 @@ assemble {
   tasks = [":module21:module02:assembleDebug"]
 }
 
+assembleNoLoS {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["-Dorg.gradle.configuration-cache.internal.load-after-store=false", "--configuration-cache"]
+  clear-configuration-cache-state-before = BUILD
+}
+
+assembleLoS {
+  tasks = [":module21:module02:assembleDebug"]
+  gradle-args = ["-Dorg.gradle.configuration-cache.internal.load-after-store=true", "--configuration-cache"]
+  clear-configuration-cache-state-before = BUILD
+}
+
 assemble4 {
   tasks = [":module21:module02:assembleDebug"]
   gradle-args = ["--max-workers=4"]

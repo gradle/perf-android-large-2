@@ -4,9 +4,7 @@
  */
 projectsEvaluated {
     rootProject {
-        val target = project(":module21:module02")
-        val reachable = reachable(target)
-        println("found ${reachable.size} projects")
+        val reachable = reachable(allprojects)
         for (proj in reachable.reversed()) {
             val maxDepth = proj.upstream.map { it.depth }.maxOrNull() ?: 0
             proj.depth = maxDepth + 1
@@ -15,19 +13,30 @@ projectsEvaluated {
                 proj.reachableFrom.addAll(u.reachableFrom)
             }
         }
+
+        println("found ${reachable.size} projects")
         println("max depth: ${reachable.maxByOrNull { it.depth }}")
         println("max reachable: ${reachable.maxByOrNull { it.reachableFrom.size }}")
-        println("depth of 2: ${reachable.find { it.depth == 2 }}")
-        println("reachable from 1: ${reachable.find { it.reachableFrom.size == 1 }}")
+        val topLevel = reachable.filter { it.depth == 1 }
+        for (proj in topLevel) {
+            println("depth of 1: ${proj}")
+        }
+        val secondLevel = reachable.filter { it.depth == 2 }
+        for (proj in secondLevel) {
+            println("depth of 2: ${proj}")
+        }
+        println("reachable from 0: ${reachable.filter { it.reachableFrom.size == 0 }}")
+        println("reachable from 1: ${reachable.filter { it.reachableFrom.size == 1 }}")
     }
 }
 
-fun reachable(target: Project): List<ProjDetails> {
+fun reachable(targets: Iterable<Project>): List<ProjDetails> {
     val allDetails = mutableMapOf<ProjNode, ProjDetails>()
     val reachable = mutableListOf<ProjDetails>()
     val seen = mutableSetOf<ProjNode>()
     val visited = mutableSetOf<ProjNode>()
-    val queue = mutableListOf(ProjNode(target))
+    val queue = mutableListOf<ProjNode>()
+    queue.addAll(targets.map { ProjNode(it) })
     while (queue.isNotEmpty()) {
         val proj = queue.first()
         if (seen.add(proj)) {
@@ -53,7 +62,8 @@ fun dependenciesOf(target: ProjNode): List<ProjNode> {
     if (config == null) {
         config = target.project.configurations.findByName("runtimeClasspath")
         if (config == null) {
-            throw RuntimeException("could not find config in ${target.project.path}")
+            println("could not find config in ${target.project.path}")
+            return listOf()
         }
     }
     for (dep in config.allDependencies) {
@@ -66,12 +76,12 @@ fun dependenciesOf(target: ProjNode): List<ProjNode> {
 
 data class ProjNode(val project: Project)
 
-data class ProjDetails(val project: ProjNode) {
+class ProjDetails(val project: ProjNode) {
     val upstream = mutableSetOf<ProjDetails>()
     var depth = 1
     val reachableFrom = mutableSetOf<ProjDetails>()
 
     override fun toString(): String {
-        return "$project.project.path -> depth: $depth, reachableFrom: ${reachableFrom.size}"
+        return "${project.project.path} -> depth: $depth, reachableFrom: ${reachableFrom.size}"
     }
 }
