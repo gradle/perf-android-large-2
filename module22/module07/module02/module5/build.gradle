@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module22.module07.module02.module5'
             }
 dependencies {
     api("com.squareup.wire:wire-runtime:3.0.0")

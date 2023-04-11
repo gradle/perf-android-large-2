@@ -14,6 +14,7 @@ apply plugin: "kotlin-kapt"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module141.module1.module10'
             }
 dependencies {
     api(project(":module06:module109:module1"))

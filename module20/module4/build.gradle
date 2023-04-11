@@ -9,7 +9,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+    namespace 'pkg.android.module20.module4'
+
 }
 dependencies {
     implementation(project(":module06:module067"))

@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module253'
             }
 dependencies {
     annotationProcessor("com.google.dagger:dagger-compiler:2.28")

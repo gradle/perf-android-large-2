@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module22.module07.module33.module1'
             }
 dependencies {
     annotationProcessor("com.uber.nullaway:nullaway:0.7.2")

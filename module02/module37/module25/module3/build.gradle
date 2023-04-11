@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module02.module37.module25.module3'
             }
 dependencies {
     api("com.jakewharton.threetenabp:threetenabp:1.2.1")

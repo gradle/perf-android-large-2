@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module22.module07.module32'
             }
 dependencies {
     compileOnly("javax.annotation:jsr250-api:1.0")

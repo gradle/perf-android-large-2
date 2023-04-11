@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module234.module2'
             }
 dependencies {
     api("androidx.constraintlayout:constraintlayout:1.1.3")

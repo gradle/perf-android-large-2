@@ -9,7 +9,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+    namespace 'pkg.android.module22.module01.module48'
+
 }
 dependencies {
     api(project(":module06:module109:module1"))

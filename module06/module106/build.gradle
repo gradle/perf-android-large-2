@@ -9,7 +9,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+    namespace 'pkg.android.module06.module106'
+
 }
 dependencies {
     implementation(project(":module06:module320:module1"))

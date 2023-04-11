@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module05.module01.module07.module3'
             }
 dependencies {
     api(project(":module05:module01:module06:module3"))
