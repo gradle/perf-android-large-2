@@ -1,3 +1,6 @@
+import com.sun.management.HotSpotDiagnosticMXBean
+
+import java.lang.management.ManagementFactory
 
 buildscript {
     repositories {
@@ -6,11 +9,11 @@ buildscript {
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.20")
         // see https://developer.android.com/studio/releases/gradle-plugin
         // see https://maven.google.com/web/index.html?#com.android.tools.build:gradle
         classpath("com.android.tools.build:gradle:8.0.0-rc01")
-//        classpath("com.android.tools.build:gradle:7.4.0")
+        // classpath("com.android.tools.build:gradle:7.4.2")
         // Compatible with 7.4+
         // classpath("com.android.tools.build:gradle:7.3.0-rc01")
         // Compatible with 7.3.3+
@@ -27,6 +30,7 @@ plugins {
 
 allprojects {
     repositories {
+        // maven { url 'https://nowhere.local' }
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
@@ -36,5 +40,11 @@ allprojects {
 
 println "USING GRADLE VERSION $gradle.gradleVersion"
 
-dependencies {
+gradle.buildFinished {
+//    println "DUMP HEAP"
+//    def server = ManagementFactory.getPlatformMBeanServer()
+//    def mxBean = ManagementFactory.newPlatformMXBeanProxy(server, "com.sun.management:type=HotSpotDiagnostic", HotSpotDiagnosticMXBean.class)
+//    mxBean.dumpHeap(file("heap.hprof").absolutePath, true)
+//    println "WAITING ...."
+//    Thread.sleep(10 * 60 * 1000)
 }

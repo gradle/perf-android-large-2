@@ -17,7 +17,7 @@ apply plugin: "kotlin-kapt"
                 namespace 'pkg.android.module22.module07.module16'
             }
 dependencies {
-    annotationProcessor("com.uber.nullaway:nullaway:0.7.2")
+    kapt("com.uber.nullaway:nullaway:0.7.2")
     compileOnly("javax.annotation:jsr250-api:1.0")
     implementation(project(":module01:module13"))
     implementation(project(":module04:module03:module2"))
