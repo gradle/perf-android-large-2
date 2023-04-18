@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module279.module1'
             }
 dependencies {
     api("com.f2prateek.rx.preferences2:rx-preferences:2.0.1-beta1")

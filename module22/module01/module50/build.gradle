@@ -14,6 +14,7 @@ apply plugin: "kotlin-kapt"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module22.module01.module50'
             }
 dependencies {
     compileOnly("androidx.annotation:annotation:1.1.0")

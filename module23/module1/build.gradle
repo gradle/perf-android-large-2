@@ -9,7 +9,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+    namespace 'pkg.android.module23.module1'
+
 }
 dependencies {
     testImplementation(project(":module06:module339:module3:module1"))

@@ -14,6 +14,7 @@ apply plugin: "kotlin-kapt"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module07.module25'
             }
 dependencies {
     annotationProcessor("com.google.dagger:dagger-compiler:2.28")

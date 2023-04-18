@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module147.module7'
             }
 dependencies {
     api("com.google.android.gms:play-services-tasks:17.0.0")

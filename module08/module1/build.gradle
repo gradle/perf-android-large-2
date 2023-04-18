@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module08.module1'
             }
 dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.1.0")

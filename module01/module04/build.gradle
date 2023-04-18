@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module01.module04'
             }
 dependencies {
     api("io.reactivex.rxjava2:rxjava:2.2.19")

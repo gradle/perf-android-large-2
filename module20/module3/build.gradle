@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module20.module3'
             }
 dependencies {
     androidTestImplementation(project(":module06:module335:module1"))

@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module333.module5'
             }
 dependencies {
     api("com.squareup.coordinators:coordinators:0.5")

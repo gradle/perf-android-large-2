@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module07.module30.module2'
             }
 dependencies {
     api(project(":module01:module02"))
@@ -94,7 +95,7 @@ dependencies {
     implementation(project(":module07:module77:module7"))
     implementation(project(":module10"))
     implementation(project(":module15:module36:module1"))
-    implementation("com.commit451:PhotoView:1.2.5")
+    implementation("com.github.chrisbanes:PhotoView:1.2.6")
     implementation("com.github.akarnokd:rxjava2-interop:0.13.5")
     implementation("com.squareup.workflow:workflow-rx2:0.23.2")
     implementation("com.squareup.workflow:workflow-ui-core-android:0.23.2")

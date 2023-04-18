@@ -9,7 +9,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+    namespace 'pkg.android.module16.module5'
+
 }
 dependencies {
     androidTestImplementation(project(":module03:module03:module1:module1"))

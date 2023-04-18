@@ -9,7 +9,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    
+    namespace 'pkg.android.module06.module318.module2'
+
 }
 dependencies {
     annotationProcessor("com.google.dagger:dagger-compiler:2.28")

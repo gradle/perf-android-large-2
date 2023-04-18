@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module01.module13'
             }
 dependencies {
     api("com.squareup.okio:okio:2.2.2")

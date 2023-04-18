@@ -13,6 +13,7 @@ apply plugin: "kotlin-android"
                 kotlinOptions {
     jvmTarget = "1.8"
 }
+                namespace 'pkg.android.module06.module313.module5'
             }
 dependencies {
     api("com.squareup.workflow:workflow-core-jvm:0.23.2")

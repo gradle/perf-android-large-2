@@ -2,12 +2,14 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
-        classpath("com.android.tools.build:gradle:7.0.3")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.20")
+        // see https://developer.android.com/studio/releases/gradle-plugin
+        // see https://maven.google.com/web/index.html?#com.android.tools.build:gradle
+        classpath("com.android.tools.build:gradle:8.0.0-rc01")
     }
 }
 
@@ -17,7 +19,7 @@ plugins {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
      }
