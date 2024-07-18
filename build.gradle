@@ -2,8 +2,7 @@
 buildscript {
     repositories {
         google()
-        jcenter()
-        maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
+        mavenCentral()
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
@@ -17,9 +16,15 @@ plugins {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven {
+            url "https://repo.gradle.org/gradle/libs/"
+            content {
+                includeModule "com.commit451", "PhotoView"
+                includeModule "com.getkeepsafe.relinker", "relinker"
+            }
+        }
         maven { url 'https://jitpack.io' }
-        maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
      }
 }
 
